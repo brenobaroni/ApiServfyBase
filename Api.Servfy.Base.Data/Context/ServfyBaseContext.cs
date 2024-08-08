@@ -30,5 +30,16 @@ namespace Api.Servfy.Base.Data.Context
 
         public DbSet<User> User { get; set; }
 
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(ServfyBaseContext).Assembly);
+            //modelBuilder.SeedTemplates();
+            //modelBuilder.SeedMenu();
+            //modelBuilder.SeedRoles();
+            //modelBuilder.SeedRoleMenu();
+        }
+
     }
 }

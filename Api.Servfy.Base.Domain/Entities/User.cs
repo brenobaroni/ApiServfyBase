@@ -1,7 +1,10 @@
-﻿namespace Api.Servfy.Base.Domain;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Api.Servfy.Base.Domain;
 
 public partial class User
 {
+    [Key]
     public long Id { get; set; }
 
     public string Email { get; set; } = null!;

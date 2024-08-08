@@ -10,7 +10,12 @@ namespace Api.Servfy.Base.Application.Services
     {
         private readonly ServfyBaseContext _context;
 
-        public async Task<User> GetUserAsync(BigInteger id)
+        public UserService(ServfyBaseContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<User> GetUserAsync(long id)
         {
             var user = await _context.User.FirstAsync(x => x.Id == id);
             return user;

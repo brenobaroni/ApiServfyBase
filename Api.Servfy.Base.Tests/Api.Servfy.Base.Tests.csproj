@@ -17,6 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Api.Servfy.Base.Application\Api.Servfy.Base.Application.csproj" />
+    <ProjectReference Include="..\Api.Servfy.Base\Api.Servfy.Base.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Using Include="Xunit" />
   </ItemGroup>
 

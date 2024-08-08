@@ -14,7 +14,7 @@ namespace Api.Servfy.Base.Data.Modules
             {
                 DatabaseSettings databaseSetting = DatabaseSettings.Create(configuration);
                 options.UseNpgsql(databaseSetting.ConnectionString, b => b.MigrationsAssembly("Api.Servfy.Base.Migrations"));
-            });
+            }, ServiceLifetime.Transient);
 
             return services;
         }

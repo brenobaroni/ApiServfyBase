@@ -21,9 +21,9 @@ namespace Api.Servfy.Base.Application.Handlers.User.GetUser
 
         public async Task<GetUserResponse> Handle(GetUserRequest request, CancellationToken cancellationToken)
         {
-            var user = new Domain.User();
+            var result = await _userService.GetUserAsync(request.id);
 
-            return new GetUserResponse(200, "",true, user);
+            return new GetUserResponse(200, "",true, result);
         }
     }
 }

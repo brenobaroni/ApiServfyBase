@@ -10,6 +10,6 @@ namespace Api.Servfy.Base.Application.Services.Contracts
 {
     public interface IUserService
     {
-        Task<User> GetUserAsync(BigInteger id);
+        Task<User> GetUserAsync(long id);
     }
 }
